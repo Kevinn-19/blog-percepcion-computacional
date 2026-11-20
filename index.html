@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Máquinas que perciben como nosotros: hacia una percepción computacional multimodal</title>
+<meta name="description" content="Blog sobre el futuro de la percepción computacional: tendencias, una aplicación multimodal, beneficios, desafíos y una reflexión personal.">
+<style>
+  :root {
+    --bg: #fbfaf7;
+    --ink: #1f2328;
+    --quiet: #5b6470;
+    --edge: #7a828c;
+    --accent: #2f6fdb;
+    --rule: #e3e0d8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16181c;
+      --ink: #eceef1;
+      --quiet: #a4acb6;
+      --edge: #8b939d;
+      --accent: #6ea2ff;
+      --rule: #2b2f36;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 19px;
+    line-height: 1.7;
+  }
+  main { max-width: 720px; margin: 0 auto; padding: 56px 24px 80px; }
+  h1 {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: clamp(1.9rem, 5vw, 2.6rem);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin: 0 0 24px;
+  }
+  h2 {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 1.4rem;
+    line-height: 1.25;
+    margin: 48px 0 12px;
+  }
+  .meta {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: var(--quiet);
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 24px;
+    margin-bottom: 32px;
+  }
+  .meta p { margin: 0; }
+  p { margin: 0 0 18px; }
+  figure { margin: 32px 0; }
+  figure svg { width: 100%; height: auto; display: block; }
+  figcaption {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: var(--quiet);
+    margin-top: 8px;
+  }
+  ul.refs { padding-left: 20px; font-size: 0.95rem; line-height: 1.6; }
+  ul.refs li { margin-bottom: 10px; }
+  footer {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.85rem;
+    color: var(--quiet);
+    border-top: 1px solid var(--rule);
+    margin-top: 56px;
+    padding-top: 16px;
+  }
+  svg text { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; fill: var(--ink); }
+  svg .q { fill: var(--quiet); }
+  svg .t { font-size: 15px; font-weight: 600; }
+  svg .n { font-weight: 600; }
+  svg .s { font-size: 11.5px; }
+  svg .box { fill: none; stroke: var(--edge); stroke-width: 1.25; }
+  svg .main { fill: var(--accent); fill-opacity: 0.12; stroke: var(--accent); stroke-width: 2; }
+  svg .arrow { fill: none; stroke: var(--edge); stroke-width: 1.25; }
+</style>
+</head>
+<body>
+<main>
+  <article>
+    <h1>Máquinas que perciben como nosotros: hacia una percepción computacional multimodal</h1>
+
+    <div class="meta">
+      <p>Autor: Kevin Esteban Chiquillo Díaz</p>
+      <p>Universidad de Cundinamarca</p>
+      <p>Especialización en Inteligencia Artificial</p>
+      <p>Asignatura: Percepción Computacional</p>
+      <p>Docente: Mónica María Fonseca Vigoya</p>
+      <p>Actividad: Blog sobre el futuro de la percepción computacional</p>
+    </div>
+
+    <p>Hace unos años, que una máquina reconociera un gato en una foto o una palabra en una grabación parecía un logro enorme. Hoy eso es apenas el punto de partida. Después de trabajar con sonido en Percepción Computacional, me quedé con una pregunta: ¿cómo va a cambiar esta disciplina la forma en que las máquinas se relacionan con nosotros y con lo que nos rodea? Mi apuesta es que dejarán de reconocer señales sueltas y empezarán a interpretar situaciones.</p>
+
+    <h2>Dos tendencias que marcan el rumbo</h2>
+
+    <p>La primera tendencia es la percepción multimodal con un lenguaje común. Modelos como CLIP aprenden a poner imágenes y texto en un mismo espacio (Radford et al., 2021), e ImageBind lleva la idea a seis modalidades, entre ellas audio, profundidad y datos inerciales (Girdhar et al., 2023). Gracias a eso, un sonido puede asociarse con una imagen sin que el modelo haya visto ese par durante el entrenamiento. Baltrušaitis et al. (2019) ya advertían que alinear y fusionar modalidades era uno de los grandes retos del campo.</p>
+
+    <figure>
+      <svg viewBox="0 0 760 164" role="img" aria-labelledby="f1t">
+        <title id="f1t">La percepción pasa de reconocer señales aisladas a interpretar situaciones</title>
+        <defs>
+          <marker id="a1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--edge)"/></marker>
+        </defs>
+        <text class="t" x="24" y="30">La percepción pasa de reconocer señales aisladas a interpretar situaciones</text>
+        <path class="arrow" d="M176 102H212" marker-end="url(#a1)"/>
+        <path class="arrow" d="M362 102H398" marker-end="url(#a1)"/>
+        <path class="arrow" d="M548 102H584" marker-end="url(#a1)"/>
+
+        <rect class="box" x="26" y="64" width="150" height="76" rx="8"/>
+        <text class="n" x="101" y="88" text-anchor="middle">Reconocer</text>
+        <text class="n" x="101" y="104" text-anchor="middle">señales aisladas</text>
+        <text class="q s" x="101" y="124" text-anchor="middle">Imagen o audio</text>
+
+        <rect class="box" x="212" y="64" width="150" height="76" rx="8"/>
+        <text class="n" x="287" y="88" text-anchor="middle">Alinear imagen</text>
+        <text class="n" x="287" y="104" text-anchor="middle">y texto</text>
+        <text class="q s" x="287" y="124" text-anchor="middle">CLIP, 2021</text>
+
+        <rect class="box" x="398" y="64" width="150" height="76" rx="8"/>
+        <text class="n" x="473" y="88" text-anchor="middle">Unir seis</text>
+        <text class="n" x="473" y="104" text-anchor="middle">modalidades</text>
+        <text class="q s" x="473" y="124" text-anchor="middle">ImageBind, 2023</text>
+
+        <rect class="main" x="584" y="64" width="150" height="76" rx="8"/>
+        <text class="n" x="659" y="88" text-anchor="middle">Interpretar</text>
+        <text class="n" x="659" y="104" text-anchor="middle">situaciones</text>
+        <text class="q s" x="659" y="124" text-anchor="middle">Horizonte</text>
+      </svg>
+      <figcaption>Figura 1. Evolución de la percepción computacional. Fuente: elaboración propia con base en Radford et al. (2021) y Girdhar et al. (2023).</figcaption>
+    </figure>
+
+    <p>La segunda es la percepción en el borde (edge). Cada vez más modelos pequeños corren directamente en el dispositivo, sea una cámara, un audífono o un reloj, en lugar de mandar todo a la nube. Eso reduce la espera y hace posible que los datos sensibles no salgan del lugar donde se capturan.</p>
+
+    <figure>
+      <svg viewBox="0 0 760 244" role="img" aria-labelledby="f2t">
+        <title id="f2t">Procesar en el borde evita que el dato salga del lugar donde se captura</title>
+        <defs>
+          <marker id="a2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--edge)"/></marker>
+        </defs>
+        <text class="t" x="24" y="30">Procesar en el borde evita que el dato salga del lugar donde se captura</text>
+
+        <path class="arrow" d="M266 84H300" marker-end="url(#a2)"/>
+        <path class="arrow" d="M416 84H450" marker-end="url(#a2)"/>
+        <path class="arrow" d="M566 84H600" marker-end="url(#a2)"/>
+        <path class="arrow" d="M266 164H300" marker-end="url(#a2)"/>
+        <path class="arrow" d="M416 164H450" marker-end="url(#a2)"/>
+
+        <text class="n" x="24" y="88">En la nube</text>
+        <text class="n" x="24" y="168">En el borde</text>
+
+        <rect class="box" x="150" y="58" width="116" height="52" rx="8"/>
+        <text x="208" y="88" text-anchor="middle">Sensor</text>
+        <rect class="box" x="300" y="58" width="116" height="52" rx="8"/>
+        <text x="358" y="88" text-anchor="middle">Internet</text>
+        <rect class="box" x="450" y="58" width="116" height="52" rx="8"/>
+        <text x="508" y="82" text-anchor="middle">Servidor</text>
+        <text x="508" y="98" text-anchor="middle">en la nube</text>
+        <rect class="box" x="600" y="58" width="116" height="52" rx="8"/>
+        <text x="658" y="88" text-anchor="middle">Respuesta</text>
+
+        <rect class="box" x="150" y="138" width="116" height="52" rx="8"/>
+        <text x="208" y="168" text-anchor="middle">Sensor</text>
+        <rect class="main" x="300" y="138" width="116" height="52" rx="8"/>
+        <text class="n" x="358" y="162" text-anchor="middle">Modelo en el</text>
+        <text class="n" x="358" y="178" text-anchor="middle">dispositivo</text>
+        <rect class="box" x="450" y="138" width="116" height="52" rx="8"/>
+        <text x="508" y="168" text-anchor="middle">Respuesta</text>
+
+        <text class="q s" x="24" y="222">En el borde, el dato se procesa donde se captura: menor latencia y mayor privacidad</text>
+      </svg>
+      <figcaption>Figura 2. Procesamiento en la nube frente a procesamiento en el borde. Fuente: elaboración propia.</figcaption>
+    </figure>
+
+    <h2>Una aplicación: el hogar que entiende</h2>
+
+    <p>Imaginemos un asistente para adultos mayores que viven solos y que combina tres señales: visión (la postura del cuerpo, para notar una caída), audio (un golpe seco o una petición de ayuda) y sensores inerciales en una pulsera (un impacto brusco seguido de quietud). Ninguna es confiable por sí sola: la cámara puede confundir a alguien descansando en el suelo con una caída, y un ruido fuerte puede ser solo un objeto que se cayó. Cuando las tres coinciden, en cambio, la confianza sube y las falsas alarmas bajan, y el sistema avisa a un familiar o a emergencias. La Figura 3 resume el flujo.</p>
+
+    <figure>
+      <svg viewBox="0 0 760 312" role="img" aria-labelledby="f3t">
+        <title id="f3t">Tres señales coinciden antes de que el sistema emita la alerta</title>
+        <defs>
+          <marker id="a3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--edge)"/></marker>
+        </defs>
+        <text class="t" x="24" y="30">Tres señales coinciden antes de que el sistema emita la alerta</text>
+
+        <path class="arrow" d="M236 90L300 140" marker-end="url(#a3)"/>
+        <path class="arrow" d="M236 160L300 160" marker-end="url(#a3)"/>
+        <path class="arrow" d="M236 230L300 180" marker-end="url(#a3)"/>
+        <path class="arrow" d="M460 160H524" marker-end="url(#a3)"/>
+
+        <rect class="box" x="24" y="64" width="212" height="52" rx="8"/>
+        <text class="n" x="130" y="87" text-anchor="middle">Visión</text>
+        <text class="q s" x="130" y="104" text-anchor="middle">Postura corporal (cámara)</text>
+
+        <rect class="box" x="24" y="134" width="212" height="52" rx="8"/>
+        <text class="n" x="130" y="157" text-anchor="middle">Audio</text>
+        <text class="q s" x="130" y="174" text-anchor="middle">Golpe seco o petición de ayuda</text>
+
+        <rect class="box" x="24" y="204" width="212" height="52" rx="8"/>
+        <text class="n" x="130" y="227" text-anchor="middle">Sensor inercial</text>
+        <text class="q s" x="130" y="244" text-anchor="middle">Impacto y quietud (pulsera)</text>
+
+        <rect class="box" x="300" y="120" width="160" height="80" rx="8"/>
+        <text class="n" x="380" y="144" text-anchor="middle">Fusión multimodal</text>
+        <text class="q s" x="380" y="164" text-anchor="middle">Combina y pondera</text>
+        <text class="q s" x="380" y="180" text-anchor="middle">las tres señales</text>
+
+        <rect class="main" x="524" y="120" width="212" height="80" rx="8"/>
+        <text class="n" x="630" y="144" text-anchor="middle">Alerta de caída</text>
+        <text class="s" x="630" y="164" text-anchor="middle">Aviso a un familiar</text>
+        <text class="s" x="630" y="180" text-anchor="middle">o a emergencias</text>
+
+        <text class="q s" x="24" y="292">A mayor coincidencia entre señales, mayor confianza y menos falsas alarmas</text>
+      </svg>
+      <figcaption>Figura 3. Flujo de un asistente multimodal para detectar caídas. Fuente: elaboración propia.</figcaption>
+    </figure>
+
+    <h2>Beneficios en el cuidado de la salud</h2>
+
+    <p>En el cuidado de adultos mayores, una caída que no se atiende a tiempo agrava las lesiones. Un sistema así podría acortar la respuesta, darles autonomía a quienes prefieren seguir en su casa y aliviar a los cuidadores que no pueden acompañarlos todo el día. En sociedades que envejecen y con servicios de atención limitados, eso puede ser muy valioso. Eso sí, es una proyección mía: CLIP e ImageBind se evaluaron en tareas de clasificación y recuperación, no en detección de caídas, así que su desempeño en un hogar real tendría que validarse.</p>
+
+    <h2>Desafíos: técnicos, éticos y sociales</h2>
+
+    <p>En lo técnico, fusionar señales con frecuencias, ruido y sincronización distintos sigue siendo difícil, y un modelo entrenado en un entorno puede fallar en otro (Baltrušaitis et al., 2019). En lo ético y social, un sistema que ve y escucha dentro de la casa abre riesgos de privacidad y vigilancia, y los datos de entrenamiento pueden arrastrar sesgos que lo hagan funcionar peor con ciertos cuerpos, acentos o contextos (Mehrabi et al., 2021). Por eso el consentimiento informado y el procesamiento local de los datos no son un adorno, sino condiciones de diseño.</p>
+
+    <h2>Reflexión personal</h2>
+
+    <p>Creo que el futuro de la percepción computacional no se va a medir por la precisión en un banco de pruebas, sino por la confianza que las personas puedan depositar en ella. La técnica avanza muy rápido; la regulación, la participación de las comunidades y la transparencia, bastante más despacio. Por eso siento que quienes nos formamos en IA no solo debemos preguntarnos si la máquina puede percibir esto, sino también si debería hacerlo y para quién. Si logramos que perciba para cuidar y no para vigilar, será una de las tecnologías más útiles de la próxima década.</p>
+
+    <h2>Referencias</h2>
+
+    <ul class="refs">
+      <li>Baltrušaitis, T., Ahuja, C., &amp; Morency, L.-P. (2019). Multimodal machine learning: A survey and taxonomy. IEEE Transactions on Pattern Analysis and Machine Intelligence, 41(2), 423–443.</li>
+      <li>Girdhar, R., El-Nouby, A., Liu, Z., Singh, M., Alwala, K. V., Joulin, A., &amp; Misra, I. (2023). ImageBind: One embedding space to bind them all. Proceedings of the IEEE/CVF CVPR, 15180–15190.</li>
+      <li>Mehrabi, N., Morstatter, F., Saxena, N., Lerman, K., &amp; Galstyan, A. (2021). A survey on bias and fairness in machine learning. ACM Computing Surveys, 54(6), 1–35.</li>
+      <li>Radford, A., Kim, J. W., Hallacy, C., et al. (2021). Learning transferable visual models from natural language supervision. Proceedings of ICML, PMLR 139, 8748–8763.</li>
+    </ul>
+
+    <footer>Kevin Esteban Chiquillo Díaz, Universidad de Cundinamarca. Trabajo académico para Percepción Computacional.</footer>
+  </article>
+</main>
+</body>
+</html>
